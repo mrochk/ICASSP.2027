@@ -1,0 +1,8 @@
+[project]
+name = "ICASSP2027"
+authors = [{name="Maxime Rochkoulets", email="mrochkoulets@gmail.com"}]
+version = "0.1.0"
+description = "Source code for the paper 'Making Tensor Decoupling More Robust and Less Parametric' submitted to IEEE ICASSP 2027."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

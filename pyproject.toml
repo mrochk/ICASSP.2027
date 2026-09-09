@@ -5,4 +5,9 @@ version = "0.1.0"
 description = "Source code for the paper 'Making Tensor Decoupling More Robust and Less Parametric' submitted to IEEE ICASSP 2027."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "decoupling>=0.0.7",
+    "matplotlib>=3.11.1",
+    "notebook>=7.6.2",
+    "seaborn>=0.13.2",
+]

@@ -99,7 +99,7 @@ def plot_smoothing1(dofs, errors_nosmoothing, errors_smoothing, colors):
     ax.scatter(dofs, errors_smoothing[:, 0],   color=colors[0], marker=m1)
     ax.scatter(dofs, errors_smoothing[:, 1],   color=colors[0], marker=m2)
     ax.set_xlabel(r'$df$')
-    ax.set_ylabel('Mean Per-Output Error')
+    ax.set_ylabel('Mean Error')
     group_handles = [
         Line2D([0], [0], marker='s', linestyle='None', markerfacecolor=colors[1],
            markeredgecolor=colors[1], markersize=8, label='No Smoothing (B-Splines)'),

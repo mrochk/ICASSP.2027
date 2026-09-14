@@ -46,7 +46,7 @@ def setup():
     return colors
 
 def plot_before(sigmas1, sigmas2, errors, rconds, colors):
-    _, axes = plt.subplots(2, 1, figsize=(3.5, 3))
+    fig, axes = plt.subplots(2, 1, figsize=(3.5, 3))
 
     ax = axes[0]
     ax.semilogx(sigmas1, errors[:, 0], 'X', label=r'$y_1$', color=colors[0])
@@ -55,20 +55,24 @@ def plot_before(sigmas1, sigmas2, errors, rconds, colors):
     ax.legend()
 
     ax = axes[1]
-    ax.loglog(sigmas2, rconds[0], label=r'$W$', color=colors[2], linewidth=1.5)
-    ax.loglog(sigmas2, rconds[1], label=r'$V$', color=colors[1], linewidth=1.5)
-    ax.loglog(sigmas2, rconds[2], label=r'$H$', color=colors[0], linewidth=1.5)
-    ax.loglog(sigmas2, rconds[3], label=r'$R$', color=colors[3], linewidth=1.5)
+    ax.loglog(sigmas2, rconds['W'], label=r'$W$', color=colors[2], linewidth=1.5)
+    ax.loglog(sigmas2, rconds['V'], label=r'$V$', color=colors[1], linewidth=1.5)
+    ax.loglog(sigmas2, rconds['H'], label=r'$H$', color=colors[0], linewidth=1.5)
+    ax.loglog(sigmas2, rconds['R'], label=r'$R$', color=colors[3], linewidth=1.5)
     ax.set_xlabel(r'$\sigma$')
     ax.set_ylabel('Median RCond Number')
     ax.legend()
 
     plt.tight_layout()
-    plt.savefig(PLOTS_PATH / 'before.pdf')
+
+    savepath = PLOTS_PATH / 'before.pdf'
+    plt.savefig(savepath)
+    print(f'plot saved at {savepath}')
+    fig.set_dpi(100)
     plt.show()
 
 def plot_after(sigmas1, sigmas2, errors, rconds, colors):
-    _, axes = plt.subplots(2, 1, figsize=(3.5, 2.9))
+    fig, axes = plt.subplots(2, 1, figsize=(3.5, 2.9))
 
     ax = axes[0]
     ax.semilogx(sigmas1, errors[:, 0], 'X', label=r'$y_1$', color=colors[0])
@@ -79,20 +83,23 @@ def plot_after(sigmas1, sigmas2, errors, rconds, colors):
     ax.set_yticks([0, 5, 10])
 
     ax = axes[1]
-    ax.semilogx(sigmas2, rconds[0], label=r'$W$', color=colors[2], linewidth=2)
-    ax.semilogx(sigmas2, rconds[1], label=r'$V$', color=colors[1], linewidth=2)
-    ax.semilogx(sigmas2, rconds[2], label=r'$H$', color=colors[0], linewidth=2)
-    ax.semilogx(sigmas2, rconds[3], label=r'$R$', color=colors[3], linewidth=2)
+    ax.semilogx(sigmas2, rconds['W'], label=r'$W$', color=colors[2], linewidth=2)
+    ax.semilogx(sigmas2, rconds['V'], label=r'$V$', color=colors[1], linewidth=2)
+    ax.semilogx(sigmas2, rconds['H'], label=r'$H$', color=colors[0], linewidth=2)
+    ax.semilogx(sigmas2, rconds['R'], label=r'$R$', color=colors[3], linewidth=2)
     ax.set_xlabel(r'$\sigma$')
     ax.set_yticks([0.0, 0.3, 0.6])
     ax.set_ylabel('Median RCond Number')
 
     plt.tight_layout()
-    plt.savefig(PLOTS_PATH / 'after.pdf')
+    savepath = PLOTS_PATH / 'after.pdf'
+    plt.savefig(savepath)
+    print(f'plot saved at {savepath}')
+    fig.set_dpi(100)
     plt.show()
 
 def plot_smoothing1(dofs, errors_nosmoothing, errors_smoothing, colors):
-    _, ax = plt.subplots(figsize=(3.5, 1.9))
+    fig, ax = plt.subplots(figsize=(3.5, 1.9))
     m1 = '.'; m2 = '+'
     ax.scatter(dofs, errors_nosmoothing[:, 0], color=colors[3], marker=m1)
     ax.scatter(dofs, errors_nosmoothing[:, 1], color=colors[3], marker=m2)
@@ -121,7 +128,10 @@ def plot_smoothing1(dofs, errors_nosmoothing, errors_smoothing, colors):
         borderaxespad=0.2,
     )
     plt.tight_layout()
-    plt.savefig(PLOTS_PATH / 'smoothing1.pdf')
+    savepath = PLOTS_PATH / 'smoothing1.pdf'
+    plt.savefig(savepath)
+    print(f'plot saved at {savepath}')
+    fig.set_dpi(100)
     plt.show()
 
 def plot_smoothing2(dofs, errors_nosmoothing, errors_smoothing, colors):
@@ -180,5 +190,9 @@ def plot_smoothing2(dofs, errors_nosmoothing, errors_smoothing, colors):
     ax.yaxis.set_major_formatter(FuncFormatter(lambda y, _: f'{y:g}'))
     ax.yaxis.set_minor_formatter(NullFormatter())
     fig.tight_layout()
-    plt.savefig(PLOTS_PATH / 'smoothing2.pdf')
+    savepath = PLOTS_PATH / 'smoothing2.pdf'
+    plt.savefig(savepath)
+    print(f'plot saved at {savepath}')
+    fig.set_dpi(100)
     plt.show()
+

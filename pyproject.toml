@@ -6,7 +6,8 @@ description = "Source code for the paper 'Making Tensor Decoupling More Robust a
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "decoupling>=0.0.7",
+    "decoupling==0.0.8",
+    "ipywidgets>=8.1.9",
     "matplotlib>=3.11.1",
     "notebook>=7.6.2",
     "seaborn>=0.13.2",

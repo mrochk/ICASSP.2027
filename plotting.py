@@ -68,7 +68,7 @@ def plot_before(sigmas1, sigmas2, errors, rconds, colors):
     savepath = PLOTS_PATH / 'before.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(100)
+    fig.set_dpi(200)
     plt.show()
 
 def plot_after(sigmas1, sigmas2, errors, rconds, colors):
@@ -95,7 +95,7 @@ def plot_after(sigmas1, sigmas2, errors, rconds, colors):
     savepath = PLOTS_PATH / 'after.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(100)
+    fig.set_dpi(200)
     plt.show()
 
 def plot_smoothing1(dofs, errors_nosmoothing, errors_smoothing, colors):
@@ -131,11 +131,11 @@ def plot_smoothing1(dofs, errors_nosmoothing, errors_smoothing, colors):
     savepath = PLOTS_PATH / 'smoothing1.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(100)
+    fig.set_dpi(200)
     plt.show()
 
 def plot_smoothing2(dofs, errors_nosmoothing, errors_smoothing, colors):
-    edges = [10, 50, 60, 70, 80, 90, 101]
+    edges = [10, 30, 50, 70, 80, 90, 101]
     groups = list(zip(edges[:-1], edges[1:]))
     ticks = [f'[{lo}-{hi-1}]' for lo, hi in groups]
     pos = jnp.arange(len(groups))
@@ -167,6 +167,7 @@ def plot_smoothing2(dofs, errors_nosmoothing, errors_smoothing, colors):
     ax.axvline(x=2.5, color='black', linewidth=0.1,  zorder=0)
     ax.axvline(x=3.5, color='black', linewidth=0.1,  zorder=0)
     ax.axvline(x=4.5, color='black', linewidth=0.1,  zorder=0)
+    ax.axvline(x=5.5, color='black', linewidth=0.1,  zorder=0)
 
     ax.set_xticks(pos); ax.set_xticklabels(ticks)
     ax.set_xlim(-0.5, len(groups) - 0.5)
@@ -193,6 +194,6 @@ def plot_smoothing2(dofs, errors_nosmoothing, errors_smoothing, colors):
     savepath = PLOTS_PATH / 'smoothing2.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(100)
+    fig.set_dpi(200)
     plt.show()
 

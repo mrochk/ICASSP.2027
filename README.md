@@ -4,7 +4,7 @@
 
 *Maxime Rochkoulets, Joppe De Jonghe, Mariya Ishteva*
 
-<img src="plots/smoothing1.png" width="450">
+<img src="plots/smoothing.png" width="450">
 
 ***
 

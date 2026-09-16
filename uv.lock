@@ -533,7 +533,7 @@ wheels = [
 
 [[package]]
 name = "decoupling"
-version = "0.0.8"
+version = "0.0.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beartype" },
@@ -542,9 +542,9 @@ dependencies = [
     { name = "jaxtyping" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c5/6c/bfcafdc6d20cab1ae0a1cc216397600bd1df1c76044e38aa4084c1781b1e/decoupling-0.0.8.tar.gz", hash = "sha256:4db0fd485445166f293f128f616ef2902aa95c07534ddf012ac61f289a2ec0bd", size = 11311, upload-time = "2026-09-14T09:46:40.231Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f3/c3/f4df828317407f7c476557b652c580300b18a24df5d18df1049cef9d2089/decoupling-0.0.9.tar.gz", hash = "sha256:6d215db7019d4ac4888f56c1bd5009434cb2d86197080ee45a931e04bccf6740", size = 11368, upload-time = "2026-09-15T08:41:53.619Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/82/6f/2290125183e6e15e90defd9316835e74c6ab2f0593c2ea1b362a4ae59738/decoupling-0.0.8-py3-none-any.whl", hash = "sha256:140c29d8984dd5c0d5337dd0de756aa656ece210c8bbcc0d4b77c9bed61a588c", size = 13206, upload-time = "2026-09-14T09:46:39.045Z" },
+    { url = "https://files.pythonhosted.org/packages/27/7e/da8cbba1b84869faa69fc8c76246da831f1e216ae0cca9d73640f08dd6a3/decoupling-0.0.9-py3-none-any.whl", hash = "sha256:7529347c49fd59f829c0d7d92432675695000da51ffbb9b3112f9cbad93f314a", size = 13273, upload-time = "2026-09-15T08:41:52.402Z" },
 ]
 
 [[package]]
@@ -691,7 +691,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "decoupling", specifier = "==0.0.8" },
+    { name = "decoupling", specifier = "==0.0.9" },
     { name = "ipywidgets", specifier = ">=8.1.9" },
     { name = "matplotlib", specifier = ">=3.11.1" },
     { name = "notebook", specifier = ">=7.6.2" },
@@ -1663,7 +1663,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
+    { name = "ptyprocess" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [

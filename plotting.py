@@ -68,7 +68,7 @@ def plot_before(sigmas1, sigmas2, errors, rconds, colors):
     savepath = PLOTS_PATH / 'before.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(200)
+    fig.set_dpi(150)
     plt.show()
 
 def plot_after(sigmas1, sigmas2, errors, rconds, colors):
@@ -95,7 +95,7 @@ def plot_after(sigmas1, sigmas2, errors, rconds, colors):
     savepath = PLOTS_PATH / 'after.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(200)
+    fig.set_dpi(150)
     plt.show()
 
 def plot_smoothing1(dofs, errors_nosmoothing, errors_smoothing, colors):
@@ -131,7 +131,7 @@ def plot_smoothing1(dofs, errors_nosmoothing, errors_smoothing, colors):
     savepath = PLOTS_PATH / 'smoothing1.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(200)
+    fig.set_dpi(150)
     plt.show()
 
 def plot_smoothing2(dofs, errors_nosmoothing, errors_smoothing, colors):
@@ -194,6 +194,6 @@ def plot_smoothing2(dofs, errors_nosmoothing, errors_smoothing, colors):
     savepath = PLOTS_PATH / 'smoothing2.pdf'
     plt.savefig(savepath)
     print(f'plot saved at {savepath}')
-    fig.set_dpi(200)
+    fig.set_dpi(150)
     plt.show()
 
